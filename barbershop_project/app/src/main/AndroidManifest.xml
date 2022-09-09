@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myappfinal">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyAppFinal"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.PreConfirmForEmployee"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.History"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ConfirmAppointment"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChooseTime"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChooseDay"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChooseService"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AfterLogin"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CreateAccount"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Statistics"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Evaluate"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

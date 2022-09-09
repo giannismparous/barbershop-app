@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>180</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>AfterLoginModel
+--
+-user: User
+--
++getUser(): User {query}
++setUser(user: User)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>430</y>
+      <w>200</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ChooseDayModel
+--
+-user: User
+-service: Integer
+-day: Integer
+--
++getUser(): User {query}
++setUser(user: User)
++getService(): Integer {query}
++setService(service: Integer)
++getDay(): Integer {query}
++setDay(day: Integer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>600</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>ChooseTimeModel
+--
+-user: User
+-service: Integer
+-day: Integer
+-time: Integer
+--
++getUser(): User {query}
++setUser(user: User)
++getService(): Integer {query}
++setService(service: Integer)
++getDay(): Integer {query}
++setDay(day: Integer)
++getTime(): Integer {query}
++setTime(day: Integer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>650</y>
+      <w>200</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>ChooseServiceModel
+--
+-user: User
+-service: Integer
+--
++getUser(): User {query}
++setUser(user: User)
++getService(): Integer {query}
++setService(service: Integer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>310</y>
+      <w>200</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>PreConfirmForEmployeeModel
+--
+-user: User
+-service: Integer
+-day: Integer
+-time: Integer
+-name: String
+-phone: String
+--
++getUser(): User {query}
++setUser(user: User)
++getService(): Integer {query}
++setService(service: Integer)
++getDay(): Integer {query}
++setDay(day: Integer)
++getTime(): Integer {query}
++setTime(day: Integer)
++getName(): String {query}
++setName(name: String)
++getPhone(): String {query}
++setPhone(phone: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>40</y>
+      <w>450</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>CreateAccountModel
+--
+-DB: DBLoginHelperDAO
+-createAccountController: CreateAccountController {readOnly}
+--
++getDB(): DBLoginHelperDAO {query}
++setDB(DB: DBLoginHelper)
++getCreateAccountPresenter(): CreateAccountController {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>290</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>EvaluateModel
+--
+-user: User
+-r1: Float
+--
++getUser(): User {query}
++setUser(user: User)
++getR1(): Float {query}
++setR1(r1: Float)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>650</y>
+      <w>370</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>HistoryModel
+--
+-user: User
+-appointments: ArrayList&lt;Appointment&gt;
+--
++getUser(): User {query}
++setUser(user: User)
++setAppointments(appointments: ArrayList&lt;Appointment&gt;)
++getAppointments(): ArrayList&lt;Appointment&gt; {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>420</y>
+      <w>450</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>LoginModel
+--
+-DB: DBLoginHelperDAO
+-user: User
+-loginController: LoginController {readOnly}
+--
++getDB(): DBLoginHelperDAO {query}
++setDB(DB: DBLoginHelper)
++getUser(): User {query}
++setUser(user: User)
++getLoginPresenter(): LoginController {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>30</y>
+      <w>500</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>ConfirmAppointmentModel
+--
+-user: User
+-service: Integer
+-day: Integer
+-time: Integer
+-name: String
+-phone: String
+-confirmAppointmentController: ConfirmAppointmentController {readOnly}
+--
++getUser(): User {query}
++setUser(user: User)
++getService(): Integer {query}
++setService(service: Integer)
++getDay(): Integer {query}
++setDay(day: Integer)
++getTime(): Integer {query}
++setTime(day: Integer)
++getName(): String {query}
++setName(name: String)
++getPhone(): String {query}
++setPhone(phone: String)
++getConfirmAppointmentController(): ConfirmAppointmentController {readOnly}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>180</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ProfileModel
+--
+-user: User
+--
++getUser(): User {query}
++setUser(user: User)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

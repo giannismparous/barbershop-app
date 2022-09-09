@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>360</y>
+      <w>300</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>LocalDatabase
+--
+-usernames: ArrayList&lt;String&gt;
+-passwords: ArrayList&lt;String&gt;
+-fns: ArrayList&lt;String&gt;
+-lns: ArrayList&lt;String&gt;
+-emails: ArrayList&lt;String&gt;
+-phones: ArrayList&lt;String&gt;
+--
++getUsernames(): ArrayList&lt;String&gt; {query}
++getPasswords(): ArrayList&lt;String&gt; {query}
++getFns(): ArrayList&lt;String&gt; {query}
++getLns(): ArrayList&lt;String&gt; {query}
++getEmails(): ArrayList&lt;String&gt; {query}
++getPhones(): ArrayList&lt;String&gt; {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>120</y>
+      <w>620</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+DBLoginHelperDAO
+--
+--
++checkusername(): Boolean	 {query}
++insertData(username: String, password: String, fn: String, ln: String, email: String, phone: String)
++checkUsernamePassword(user: String, pass: String): Boolean	 {query}
++takeFirstName(user: String): String {query}
++takelastName(user: String): String {query}
++takeEmail(user: String): String {query}
++takePhone(user: String): String {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>300</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>360</y>
+      <w>530</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>DBLoginHelper
+--
+_-DBNAME: String = "LoginUser.db {readOnly}"_
+--
++onCreate(myDB: SQLiteDatabase) {query}
++onUpgrade(MyDB: SQLiteDatabase, oldVersion: Integer, newVersion: Integer) 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>300</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>520</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>SQLiteOpenHelper
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1040</x>
+      <y>440</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

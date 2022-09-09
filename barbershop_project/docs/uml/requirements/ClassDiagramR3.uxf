@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>40</y>
+      <w>256</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>Appointment
+--
+_increaseId: Integer_
+id: Integer
+date: Date
+startTime: Date
+endTime: Date
+state: State
+--
+getId(): Integer
+getService(): Service
+getDate(): Date
+getStartTime(): Date
+getEndTime(): Date
+getState(): State
+cancel(): Boolean
+complete(): Boolean
+evaluateService(rating: Integer, comment: String)
+getEvaluation(): Evaluation
+showDate()
+_resetCounterId()_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1136</x>
+      <y>512</y>
+      <w>128</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Evaluation
+--
+_increaseId: Integer_
+id: Integer
+rating: Integer
+comment: String
+--
+getId(): Integer
+getRating(): Integer
+getComment(): String
+_resetCounterId()_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>496</y>
+      <w>448</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+_customers: HashMap&lt;Integer,Customer&gt;_
+gender: Character
+--
+createAnAppointment(serviceId: Integer, date: String, startTime: String, endTime: String)
+cancelAnAppointment(appointmentId: Integer)
+completeAnAppointment(appointmentId: Integer)
+addAppointment(appointment: Appointment, weekSchedule: WeekSchedule)
+viewAppointmentHistory()
+getGender(): Character
+getAppointment(): Appointment
+evaluateAppointment(appointmentId: Appointment, rating: Integer, comment: String)
+getAppointmentHistory(): HashMap&lt;Integer,Appointment&gt;
+_getCustomer(): Customer_
+_deleteCustomers()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>488</y>
+      <w>552</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+--
+makeAnAppointment(customer: Customer, serviceId: Integer, date: String, startTime: String, endTime: String)
+makeAnAppointment(customerId: Integer, serviceId: Integer, date: String, startTime: String, endTime: String)
+cancelAnAppointment(cutomer: Customer, appointmentId: Integer)
+cancelAnAppointment(customerId: Integer, appointmentId: Integer)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>400</y>
+      <w>136</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>656</x>
+      <y>400</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1176</x>
+      <y>376</y>
+      <w>80</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Contains &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>296</y>
+      <w>56</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Has &gt;</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1056</x>
+      <y>120</y>
+      <w>240</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>Service
+--
+_numberOfServices:Integer_
+id: Integer
+name: String
+price: Integer
+services: HashMap &lt;Integer , Service&gt; 
+--
+showEvaluations()
+_addServices()_
+_addNewService(name: String, price: Integer)
+_viewServices()_
+_getService(id: Integer): Service_
+getName(): String
+getId(): Integer
+getPrice(): Money
+evaluate(rating: Integer, comment: String)
+evaluate(evaluation: Evaluation)
+getAverageRating(): Double
+_clearServices()_
+_getServices(): HashMap &lt;Integer , Service&gt;_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>984</x>
+      <y>160</y>
+      <w>88</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+contains &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>256</x>
+      <y>336</y>
+      <w>80</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+State
+--
+active
+canceled
+completed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>160</y>
+      <w>144</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>User
+--
+id: Integer
+_increaseId: Integer_
+username: String
+password: String
+firstName: String
+lastName: String
+email: String
+phoneNumber: String
+--
+getId(): Integer
+_getIncreaseId(): Integer_
+getUsername(): String
+getPassword(): String
+getFirstName(): String
+getLastName(): String
+getEmail(): String
+getPhoneNumber(): String
+_resetCounterId()_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>48</y>
+      <w>488</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>WeekSchedule
+--
+_weekSchedules: ArrayList&lt;WeekSchedule&gt;_
+_activeWeekSchedule: WeekSchedule_
+startDate: Date
+endDate: Date
+startTime: Date
+endTime: Date
+appointments: HashMap&lt;Integer,Appointment&gt;
+--
+getStartDate(): Date
+getEndDate(): Date
+getStartTime(): Date
+getEndTime(): Date
+_completeWeekSchedule()_
+_getCurrentWeekSchedule()_
+_makeNewWeekSchedule(startDate: String, endDate: String, startTime: String, endTime: String)_
+_getWeekSchedules()_: ArrayList&lt;WeekSchedule&gt;_
+addAppointment(appointment: Appointment)
+cancelAppointment(appointmentId: Integer)
+getAppointments(): HashMap&lt;Integer,Appointment&gt;
+fitsToSchedule(date: Date, startTime: Date, endTime: Date)
+_deleteWeekSchedules()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".Activity.ConfirmAppointment">
+
+
+
+  <TextView
+
+      android:id="@+id/logo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="BarberShop"
+      android:textSize="60sp"
+      android:textAlignment="center"
+      android:textStyle="bold"
+      android:fontFamily="sans-serif-black"
+      app:layout_constraintTop_toTopOf="parent"
+
+      app:layout_constraintLeft_toLeftOf="parent"
+      android:layout_marginTop="50dp"
+
+      />
+
+
+  <TextView
+      android:id="@+id/summary"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="120dp"
+      android:layout_marginTop="80dp"
+
+      android:text="Summary Appointment"
+      android:textAlignment="center"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/logo" />
+
+  <TextView
+      android:id="@+id/username"
+      android:layout_width="130dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="120dp"
+      android:ems="10"
+      android:hint="Username :"
+
+      android:textSize="24sp"
+
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/logo"
+      android:layout_marginLeft="10dp"
+
+
+      />
+
+
+  <TextView
+      android:id="@+id/usernameInfo"
+
+      android:layout_width="241dp"
+      android:layout_height="34dp"
+      android:layout_marginTop="120dp"
+      android:layout_marginRight="20dp"
+
+      android:ems="10"
+
+      android:textSize="20sp"
+      app:layout_constraintRight_toRightOf="parent"
+
+
+      app:layout_constraintTop_toTopOf="@+id/logo" />
+
+  <TextView
+      android:id="@+id/service"
+      android:layout_width="109dp"
+      android:layout_height="32dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="60dp"
+      android:ems="10"
+      android:hint="Service :"
+      android:textSize="24sp"
+      app:layout_constraintLeft_toLeftOf="parent"
+
+      app:layout_constraintTop_toTopOf="@+id/username"
+
+      />
+
+  <TextView
+      android:id="@+id/serviceInfo"
+
+      android:layout_width="241dp"
+      android:layout_height="32dp"
+      android:layout_marginTop="64dp"
+      android:layout_marginRight="40dp"
+      android:ems="10"
+
+      android:hint=""
+
+      android:textSize="20sp"
+      app:layout_constraintRight_toRightOf="parent"
+
+
+      app:layout_constraintTop_toTopOf="@+id/usernameInfo" />
+
+  <TextView
+      android:id="@+id/date"
+      android:layout_width="76dp"
+      android:layout_height="34dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="60dp"
+      android:ems="10"
+      android:hint="Date :"
+      android:textSize="24sp"
+      app:layout_constraintLeft_toLeftOf="parent"
+
+      app:layout_constraintTop_toTopOf="@+id/service"
+
+
+      />
+
+
+  <TextView
+      android:id="@+id/dateInfo"
+
+      android:layout_width="241dp"
+      android:layout_height="33dp"
+      android:layout_marginTop="60dp"
+      android:layout_marginRight="68dp"
+      android:ems="10"
+
+      android:hint=""
+
+      android:textSize="20sp"
+      app:layout_constraintRight_toRightOf="parent"
+
+
+      app:layout_constraintTop_toTopOf="@+id/serviceInfo" />
+
+  <TextView
+      android:id="@+id/time"
+      android:layout_width="80dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="60dp"
+      android:ems="10"
+      android:hint="Time :"
+      android:layout_marginLeft="10dp"
+      android:textSize="24sp"
+      app:layout_constraintTop_toTopOf="@+id/date"
+      app:layout_constraintLeft_toLeftOf="parent"
+
+      />
+
+
+  <TextView
+      android:id="@+id/timeInfo"
+
+      android:layout_width="289dp"
+      android:layout_height="28dp"
+      android:layout_marginTop="64dp"
+      android:layout_marginRight="20dp"
+      android:ems="10"
+
+      android:hint=""
+
+      android:textSize="20sp"
+      app:layout_constraintRight_toRightOf="parent"
+
+
+      app:layout_constraintTop_toTopOf="@+id/dateInfo" />
+
+  <TextView
+      android:id="@+id/phone"
+      android:layout_width="180dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="60dp"
+      android:ems="10"
+      android:hint="Phone Number :"
+      android:layout_marginLeft="10dp"
+      android:textSize="24sp"
+      app:layout_constraintTop_toTopOf="@+id/time"
+
+      app:layout_constraintLeft_toLeftOf="parent"
+
+
+      />
+
+
+  <TextView
+      android:id="@+id/phoneInfo"
+
+      android:layout_width="177dp"
+      android:layout_height="26dp"
+      android:layout_marginTop="60dp"
+      android:layout_marginRight="20dp"
+      android:ems="10"
+
+      android:hint=""
+
+      android:textSize="20sp"
+      app:layout_constraintRight_toRightOf="parent"
+
+
+      app:layout_constraintTop_toTopOf="@+id/timeInfo" />
+
+  <Button
+      android:id="@+id/confirm"
+      android:layout_width="380dp"
+      android:layout_height="70dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginTop="60dp"
+
+      android:text="Confirm"
+      android:textColor="#ffffff"
+
+      android:textSize="26sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+
+      app:layout_constraintTop_toTopOf="@+id/phone"
+
+      />
+
+
+  <Button
+      android:id="@+id/back"
+      android:layout_width="380dp"
+      android:layout_height="70dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginTop="68dp"
+      android:text="Back"
+      android:textColor="#ffffff"
+
+      android:textSize="26sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/confirm"
+
+
+      />
+
+  <Button
+      android:id="@+id/exit"
+      android:layout_width="380dp"
+      android:layout_height="70dp"
+      android:layout_marginLeft="8dp"
+
+      android:layout_marginTop="68dp"
+      android:text="Exit"
+
+      android:textColor="#ffffff"
+      android:textSize="26sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toLeftOf="parent"
+
+      app:layout_constraintTop_toTopOf="@+id/back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

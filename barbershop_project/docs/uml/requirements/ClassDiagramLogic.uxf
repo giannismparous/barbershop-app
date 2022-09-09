@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>824</x>
+      <y>136</y>
+      <w>288</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>Appointment
+--
+_-increaseId: Integer_
+_-appointments: HashMap&lt;Integer,Appointment&gt;_
+-id: Integer
+-name: String
+-phone: String
+-state: State
+--
+_+isFree(day: Integer, time: Integer): Boolean {query}_
++getId(): Integer {query}
++getName(): String {query}
++getPhone(): String {query}
++getService(): Service {query}
++getDate(): String {query}
++getStartTime(): String {query}
++getState(): String {query}
++cancel(): Boolean
++complete(): Boolean
+_+resetCounterId()_
+_+getAppointments(): Collection&lt;Appointment&gt; {query}_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>576</y>
+      <w>448</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+_-customers: HashMap&lt;String,Customer&gt;_
+-gender: Character
+-voted: Boolean
+-stars: Integer
+--
++createAnAppointment(serviceId: Integer, date: Integer, startTime: Integer)
++addAppointment(appointment: Appointment)
++getHistory(): ArrayList&lt;Appointment&gt; {query}
++isEmpty(): Boolean {query}
++getGender(): Character {query}
++getAppointment(appointmentId: Integer): Appointment {query}
+_+getCustomer(username: String): Customer {query}_
++vote(stars: Integer)
++hasVoted(): Boolean {query}
++getStars(): Integer {query}
+_+getCustomers(): Collection&lt;Customer&gt; {query}_
+_+clear()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>152</x>
+      <y>448</y>
+      <w>552</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+--
++createAnAppointment(serviceId: Integer, date: Integer, startTime: Integer, name: String, phone: String)
++addAppointment(appointment: Appointment)
+_+getHistory(): ArrayList&lt;Appointment&gt; {query}_
+_+isEmpty(): Boolean {query}_
+_+resetAppointments()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>536</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>664</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>400</y>
+      <w>128</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Has</panel_attributes>
+    <additional_attributes>10.0;220.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1184</x>
+      <y>216</y>
+      <w>240</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Service
+--
+_-increaseId:Integer_
+_-services: HashMap &lt;Integer , Service&gt;_
+-id: Integer
+-name: String	
+_-price: Integer = 10{readOnly}_
+--
+_+addServices()_
++getId(): Integer {query}
++getName(): String {query}
+_+getService(key: Integer): Service {query}_
+_+getServiceName(key: Integer): String {query}_
+_+deleteServices()_
+_+getPrice(): Integer {query}_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1104</x>
+      <y>256</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+contains</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1160</x>
+      <y>464</y>
+      <w>80</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+State
+--
+active
+canceled
+completed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>344</x>
+      <y>600</y>
+      <w>192</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-username: String
+-password: String
+-firstName: String
+-lastName: String
+-email: String
+-phoneNumber: String
+--
++getUsername(): String {query}
++getPassword(): String {query}
++getFirstName(): String {query}
++getLastName(): String {query}
++getEmail(): String {query}
++getPhoneNumber(): String {query}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>328</x>
+      <y>64</y>
+      <w>360</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>TimeAppointment
+--
+_-times: HashMap&lt;Integer, TimeAppointment&gt;_
+_-timesStrings: HashMap&lt;Integer , String&gt;_
+--
+_+addTimes()_
++getTime(): String {query}
+_+getTimeAppointment(key: Integer): TimeAppointment {query}_
+_+getTimeAppointmentTime(key: Integer): String {query}_
+_+getCode(name: String) {query}_
+_+getKey(map: Map&lt;Integer, String&gt;, value: String): Integer {query}_
+_+deleteTimes()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>328</x>
+      <y>232</y>
+      <w>400</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>DateAppointment
+--
+-date: String
+_-numberOfDate: Integer = 7{readOnly}_
+_-dates: HashMap &lt;Integer , DateAppointment&gt;_
+_-datesStrings: HashMap &lt;Integer , String&gt;_
+--
+_+addDates()_
++getDate(): String {query}
+_+getDateAppointmentDate(key: Integer): String {query}_
+_+getDateAppointment(key: Integer): DateAppointment {query}_
+_-getNextDate(curDate: String): String {query}_
+_+getCode(name: String): Integer {query}_
+_+getKey(map: Map&lt;Integer, String&gt;, value: String): Integer {query}_
+_+deleteDates()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>80</y>
+      <w>160</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+contains</panel_attributes>
+    <additional_attributes>180.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>264</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+contains</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>400</y>
+      <w>216</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Has</panel_attributes>
+    <additional_attributes>10.0;120.0;250.0;10.0</additional_attributes>
+  </element>
+</diagram>

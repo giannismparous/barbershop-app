@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".Activity.ChooseTime">
+
+
+    <TextView
+
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="BarberShop"
+
+
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:textStyle="bold"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="80dp"
+
+        android:text="Time"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo" />
+
+
+    <Button
+
+
+
+        android:id="@+id/eight"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="110dp"
+
+
+        android:text="8:00"
+        android:textColor="#ffffff"
+
+
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/logo"
+
+        />
+
+    <Button
+        android:id="@+id/eightAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="108dp"
+
+        android:text="8:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/eight"
+
+        app:layout_constraintTop_toTopOf="@+id/logo"
+
+        />
+
+    <Button
+        android:id="@+id/tenAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="80dp"
+
+        android:text="10:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/ten"
+
+        app:layout_constraintTop_toTopOf="@+id/eightAnd"
+
+        />
+
+    <Button
+        android:id="@+id/eleven"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="80dp"
+
+        android:text="11:00"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/tenAnd"
+
+        app:layout_constraintTop_toTopOf="@+id/nine"
+
+        />
+
+
+    <Button
+        android:id="@+id/elevenAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="80dp"
+
+        android:text="11:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/eleven"
+
+        app:layout_constraintTop_toTopOf="@+id/nineAnd"
+
+        />
+
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="110dp"
+
+        android:text="9:00"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/eightAnd"
+
+        app:layout_constraintTop_toTopOf="@+id/logo"
+
+        />
+
+
+    <Button
+        android:id="@+id/nineAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="108dp"
+
+        android:text="9:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/nine"
+
+        app:layout_constraintTop_toTopOf="@+id/logo"
+
+        />
+
+    <Button
+        android:id="@+id/ten"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+
+        android:text="10:00"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/eight"
+
+        />
+
+
+    <Button
+        android:id="@+id/twelve"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+
+        android:text="12:00"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/ten"
+
+        />
+
+    <Button
+        android:id="@+id/twelveAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="80dp"
+
+        android:text="12:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/twelve"
+
+        app:layout_constraintTop_toTopOf="@+id/tenAnd"
+
+        />
+
+    <Button
+        android:id="@+id/thirteen"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="80dp"
+
+        android:text="13:00"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/twelveAnd"
+
+        app:layout_constraintTop_toTopOf="@+id/eleven"
+
+        />
+
+    <Button
+        android:id="@+id/thirteenAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="80dp"
+
+        android:text="13:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/thirteen"
+
+        app:layout_constraintTop_toTopOf="@+id/elevenAnd"
+
+        />
+
+    <Button
+        android:id="@+id/fourteen"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+
+        android:text="14:00"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/twelve"
+
+        />
+
+    <Button
+        android:id="@+id/fourteenAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="80dp"
+
+        android:text="14:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/fourteen"
+
+        app:layout_constraintTop_toTopOf="@+id/twelveAnd"
+
+        />
+
+    <Button
+        android:id="@+id/fifteen"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="80dp"
+
+        android:text="15:00"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/fourteenAnd"
+
+        app:layout_constraintTop_toTopOf="@+id/thirteen"
+
+        />
+
+
+    <Button
+        android:id="@+id/fifteenAnd"
+        android:layout_width="81dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="80dp"
+
+        android:text="15:30"
+        android:textColor="#ffffff"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/fifteen"
+
+        app:layout_constraintTop_toTopOf="@+id/thirteenAnd"
+
+        />
+
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginTop="144dp"
+        android:text="Back"
+
+        android:textColor="#ffffff"
+        android:textSize="26sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fourteenAnd" />
+
+    <TextView
+        android:id="@+id/purple_flag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/purple_500"
+
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/purple"
+        app:layout_constraintTop_toTopOf="@+id/back" />
+
+
+    <TextView
+        android:id="@+id/black_flag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/purple"
+        app:layout_constraintTop_toTopOf="@+id/purple_flag" />
+
+
+
+
+    <TextView
+        android:id="@+id/purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="100dp"
+
+        android:text="Free For Appointment "
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="32dp"
+
+        android:text="Exist Appointment "
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/purple" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

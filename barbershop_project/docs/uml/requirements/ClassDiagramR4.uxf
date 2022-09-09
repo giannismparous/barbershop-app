@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>160</y>
+      <w>256</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>Appointment
+--
+_increaseId: Integer_
+_appointments: HashMap&lt;Integer,Appointment&gt;_
+id: Integer
+name: String
+phone: String
+state: State
+--
+_isFree(day: Integer, time: Integer): Boolean_
+getId(): Integer
+getName(): String
+getPhone(): String
+getService(): Service
+getDate(): String
+getStartTime(): String
+getState(): String
+cancel(): Boolean
+complete(): Boolean
+_resetCounterId()_
+_getAppointments(): Collection&lt;Appointment&gt;_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>600</y>
+      <w>448</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+_customers: HashMap&lt;String,Customer&gt;_
+gender: Character
+voted: Boolean
+stars: Integer
+--
+createAnAppointment(serviceId: Integer, date: Integer, startTime: Integer)
+addAppointment(appointment: Appointment)
+getHistory(): ArrayList&lt;Appointment&gt;
+isEmpty(): Boolean
+getGender(): Character
+getAppointment(appointmentId: Integer): Appointment
+_getCustomer(username: String): Customer_
+vote(stars: Integer)
+hasVoted(): Boolean
+getStars(): Integer
+_getCustomers: Collection&lt;Customer&gt;_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>472</y>
+      <w>552</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+--
+createAnAppointment(serviceId: Integer, date: Integer, startTime: Integer, name: String, phone: String)
+addAppointment(appointment: Appointment)
+getHistory(): ArrayList&lt;Appointment&gt;
+isEmpty(): Boolean
+_resetAppointments()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>552</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>688</y>
+      <w>160</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>408</y>
+      <w>128</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Has &gt;</panel_attributes>
+    <additional_attributes>10.0;240.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1160</x>
+      <y>240</y>
+      <w>240</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>Service
+--
+_increaseId:Integer_
+_services: HashMap &lt;Integer , Service&gt;_
+id: Integer
+name: String	
+_price: Integer = 10{readOnly}_
+--
+_addServices()_
+getId(): Integer
+getName(): String
+_getService(key: Integer): Service_
+_getServiceName(key: Integer): String_
+_deleteServices()_
+_getPrice(): Integer_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1088</x>
+      <y>280</y>
+      <w>88</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+contains &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>312</y>
+      <w>80</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+State
+--
+active
+canceled
+completed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>624</y>
+      <w>144</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>User
+--
+username: String
+password: String
+firstName: String
+lastName: String
+email: String
+phoneNumber: String
+--
+getUsername(): String
+getPassword(): String
+getFirstName(): String
+getLastName(): String
+getEmail(): String
+getPhoneNumber(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>344</x>
+      <y>112</y>
+      <w>296</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>TimeAppointment
+--
+_times: HashMap&lt;Integer, TimeAppointment&gt;_
+_timesStrings: HashMap&lt;Integer , String&gt;_
+--
+_addTimes()_
+getTime(): String
+_getTimeAppointment(key: Integer): TimeAppointment_
+_getTimeAppointmentTime(key: Integer): String
+_getCode(name: String)_
+_getKey(map: Map&lt;Integer, String&gt;, value: String): Integer_
+_deleteTimes()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>272</y>
+      <w>304</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>DateAppointment
+--
+date: String
+_numberOfDate: Integer = 7{readOnly}_
+_dates: HashMap &lt;Integer , DateAppointment&gt;_
+_datesStrings: HashMap &lt;Integer , String&gt;_
+--
+_addDates()_
+getDate(): String
+_getDateAppointmentDate(key: Integer): String_
+_getDateAppointment(key: Integer): DateAppointment_
+_getNextDate(curDate: String): String_
+_getCode(name: String): Integer_
+_getKey(map: Map&lt;Integer, String&gt;, value: String): Integer_
+_deleteDates()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>128</y>
+      <w>224</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+contains &gt;</panel_attributes>
+    <additional_attributes>260.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>288</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+contains &gt;</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>408</y>
+      <w>216</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Has &gt;</panel_attributes>
+    <additional_attributes>10.0;140.0;250.0;10.0</additional_attributes>
+  </element>
+</diagram>

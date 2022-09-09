@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".Activity.ChooseDay">
+
+    <TextView
+
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BarberShop"
+        android:textSize="60sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="35dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="80dp"
+
+        android:text="Day"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/monday"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="10dp"
+
+        android:text="MONDAY"
+        android:textColor="#ffffff"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/tuesday"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="80dp"
+
+        android:text="tuesday"
+        android:textColor="#ffffff"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/monday"
+
+        />
+
+    <Button
+        android:id="@+id/wed"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="80dp"
+
+        android:text="WEDNESDAY"
+        android:textColor="#ffffff"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/tuesday"
+
+        />
+
+    <Button
+        android:id="@+id/thursday"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+
+        android:text="Thursday"
+        android:textColor="#ffffff"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/wed"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/friday"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+
+        android:text="FRIDAY"
+        android:textColor="#ffffff"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/thursday"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+
+    <Button
+        android:id="@+id/saturday"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+
+        android:text="Saturday"
+        android:textColor="#ffffff"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/friday"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+
+        android:text="Back"
+        android:textColor="#ffffff"
+
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/saturday"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

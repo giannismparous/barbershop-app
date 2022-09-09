@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>170</y>
+      <w>750</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ConfirmAppointmentController
+--
+--
++createAnAppointment(user: User, service: Integer, day: Integer, time: Integer) {query}
++createAnAppointment(user: User, service: Integer, day: Integer, time: Integer, name: String, phone: String) {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>260</y>
+      <w>750</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CreateAccountController
+--
+--
++checkUsername(DB: DBLoginHelperDAO, user: String) {query}
++insertData(DB: DBLoginHelperDAO, user: String, pass: String, fn: String, ln: String, em: String, ph: String) {query}
++createNewDB(context: Context) {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>360</y>
+      <w>750</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>LoginController
+--
+_-isFilled: Boolean_
+--
++isEmployee(user: String, pass: String, loginModel: LoginModel) {query}
++isValidCustomer(user: String, pass: String, loginModel: LoginModel) {query}
++fillEverything()
+-fillTime() {query}
+-fillDates() {query}
++createNewDB(context: Context): DBLoginHelperDAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
