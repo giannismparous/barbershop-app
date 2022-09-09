@@ -1,7 +1,7 @@
 # Barber Shop App (Android)
 
 ## Objective
-This objective was to develop a simple barbershop app for Android to make appointments and evaluate them. The software architectural pattern we used was MVP. The project also contains suffiecient JUnit tests. This project was executed in 4 phases "R1", "R2", "R3", "R4". The changes and additions made in each stage can be found [here](https://github.com/giannismparous/barbershop_app/tree/main/barbershop_project/docs/markdown).
+This objective was to develop a simple barbershop app for Android to make appointments and evaluate them. The software architectural pattern we used was MVP. The project also contains suffiecient JUnit tests and uml diagrams. This project was executed in 4 phases "R1", "R2", "R3", "R4". The changes and additions made in each stage can be found in the [project's markdown files](https://github.com/giannismparous/barbershop_app/tree/main/barbershop_project/docs/markdown).
 
 ## Setting up
 Clone this repository and open "barbershop_project" folder as an Android Studio project.
